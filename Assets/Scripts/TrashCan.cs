@@ -15,7 +15,7 @@ public class TrashCan : MonoBehaviour
         
         foreach(RaycastHit hit in hitArray)
         {
-            IItem item = hit.collider.GetComponent<IItem>();
+            IItem item = hit.collider.transform.root.GetComponent<IItem>();
             if (item != null && !item.IsInTrashCan())
             {
                 if (item.GetTrashType().Equals(trashType))
@@ -25,6 +25,7 @@ public class TrashCan : MonoBehaviour
                 }
                 else
                 {
+                    print("trash can incorrect");
                     item.OnIncorrectlyThrown();
                 }
             }

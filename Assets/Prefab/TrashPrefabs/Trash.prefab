@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashType: 0
-  trashCollider: {fileID: 0}
+  trashCollider: {fileID: 1948358578307626395}
   correctEffect: {fileID: 0}
   incorrectEffect: {fileID: 0}
   points: 0
