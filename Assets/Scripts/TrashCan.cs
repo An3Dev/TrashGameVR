@@ -9,6 +9,8 @@ public class TrashCan : MonoBehaviour
     [SerializeField] float detectionRadius = 1;
     [SerializeField] LayerMask collisionMask;
 
+    public ScoreManager scoreManager;
+
     private void Update()
     {
         RaycastHit[] hitArray = Physics.SphereCastAll(detectionHeightMarker.position, detectionRadius, Vector3.up, collisionMask);        
@@ -20,13 +22,15 @@ public class TrashCan : MonoBehaviour
             {
                 if (item.GetTrashType().Equals(trashType))
                 {
-                    print("trash can detected correct throw");
+                    //print("trash can detected correct throw");
                     item.OnCorrectlyThrown();
+                    scoreManager.OnScore(item.GetTrashType());
                 }
                 else
                 {
-                    print("trash can incorrect");
+                    //print("trash can incorrect");
                     item.OnIncorrectlyThrown();
+                    scoreManager.OnIncorrect(item.GetTrashType(), this.trashType);
                 }
             }
         }

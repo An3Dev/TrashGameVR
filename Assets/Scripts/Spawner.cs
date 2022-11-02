@@ -26,6 +26,8 @@ public class Spawner : MonoBehaviour
     // The available prefabs to choose from
     public GameObject[] availablePrefabs;
 
+    private List<GameObject> spawnedObjectsList = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,12 +45,19 @@ public class Spawner : MonoBehaviour
             currSpawnDelay = Mathf.Max(currSpawnDelay - SpawnDelayDecrement, MinSpawnDelay);
             InitRandom();
         }
-        
     }
 
 
     void InitRandom() {
         GameObject prefab = availablePrefabs[Random.Range(0, availablePrefabs.Length)];
-        Instantiate(prefab, spawnAnchor.position, Quaternion.identity);
+        GameObject newObj = Instantiate(prefab, spawnAnchor.position, Quaternion.identity);
+        spawnedObjectsList.Add(newObj);
+    }
+
+    public GameObject GetLastObject()
+    {
+        GameObject ob = spawnedObjectsList[0];
+        spawnedObjectsList.RemoveAt(0);
+        return ob;
     }
 }

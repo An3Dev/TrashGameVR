@@ -24,13 +24,13 @@ public class Trash : MonoBehaviour, IItem
 
     public void OnCorrectlyThrown()
     {
-        print("Trash item knows it was correctly thrown");
+        //print("Trash item knows it was correctly thrown");
         OnEnteredTrashCan();
     }
 
     public void OnIncorrectlyThrown()
     {
-        print("Trash item knows it was incorrectly thrown");
+        //print("Trash item knows it was incorrectly thrown");
         OnEnteredTrashCan();
     }
 

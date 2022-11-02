@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3bb1f16b3f1caaa4a9e03d30dbfc2e64, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 36029543009975373}
   - component: {fileID: 36029543009975370}
   m_Layer: 0
-  m_Name: Electronic
+  m_Name: Compost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0822a3c280d9bb34c94706c3093a83b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 3
+  trashType: 2
   trashCollider: {fileID: 3301522736691675553}
   correctEffect: {fileID: 0}
   incorrectEffect: {fileID: 0}

@@ -1,0 +1,74 @@
+{
+    "name": "TestInput",
+    "maps": [
+        {
+            "name": "Keyboard",
+            "id": "450d3781-5966-4e06-92ae-c473cd165e5e",
+            "actions": [
+                {
+                    "name": "Trash",
+                    "type": "Button",
+                    "id": "53f1c926-3088-4d55-891c-a67634f93b48",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Recycle",
+                    "type": "Button",
+                    "id": "86ef3b2a-2192-4e3f-8a1a-1f7fae4fcf1f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Compost",
+                    "type": "Button",
+                    "id": "309ca1a3-c322-4ce6-bfd2-12eb9f1fd23d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "009715a0-e868-4779-90e0-5e613d214a22",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4611d84b-6992-438a-abdb-66e1b8fd78fa",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Recycle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cc9b68d6-5d53-42c3-8af9-6ba183a518b3",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Compost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
