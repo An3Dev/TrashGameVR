@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestTrashScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 102c26fc82d06f946b4fb03dea1fb2e1,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3da1db381c7aeb143b0a4a3257d99d4b,
+      type: 2}
