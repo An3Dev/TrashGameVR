@@ -13,11 +13,16 @@ public class TrashCan : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit[] hitArray = Physics.SphereCastAll(detectionHeightMarker.position, detectionRadius, Vector3.up, collisionMask);        
-        
-        foreach(RaycastHit hit in hitArray)
+        //RaycastHit[] hitArray = Physics.SphereCastAll(detectionHeightMarker.position, detectionRadius, Vector3.up, 0.01f, collisionMask);
+        Collider[] colliderArray = Physics.OverlapSphere(detectionHeightMarker.position, detectionRadius, collisionMask);
+        foreach(Collider hit in colliderArray)
         {
-            IItem item = hit.collider.transform.root.GetComponent<IItem>();
+            IItem item = hit.GetComponent<Collider>().transform.root.GetComponent<IItem>();
+            //if (item != null)
+            //{
+
+            //    print(hit.GetComponent<Collider>().name + " " +item.ToString());
+            //}
             if (item != null && !item.IsInTrashCan())
             {
                 if (item.GetTrashType().Equals(trashType))
@@ -35,5 +40,12 @@ public class TrashCan : MonoBehaviour
             }
         }
 
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Draw a semitransparent red cube at the transforms position
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawCube(detectionHeightMarker.position, new Vector3(detectionRadius, detectionRadius, detectionRadius));
     }
 }
