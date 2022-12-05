@@ -39,6 +39,11 @@ public class Spawner : MonoBehaviour
         currSpawnDelay = spawnDelayList[indexOfWhenToChange];
     }
 
+    public int GetTotalSpawns()
+    {
+        return totalSpawns;
+    }
+
     // Update is called once per frame
     void Update()
     {
