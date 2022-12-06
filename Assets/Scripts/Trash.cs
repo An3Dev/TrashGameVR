@@ -7,6 +7,7 @@ public class Trash : MonoBehaviour, IItem
     public TrashType trashType;
     [SerializeField] Collider trashCollider;
     [SerializeField] ParticleSystem correctEffect, incorrectEffect;
+    [SerializeField] ParticleSystem recycleEffect, trashEffect, compostEffect;
     [SerializeField] int points;
 
 
@@ -38,6 +39,37 @@ public class Trash : MonoBehaviour, IItem
     {
         isInTrashCan = true;
         trashCollider.enabled = false;
+    }
+
+    public void OnMissed()
+    {
+        //if (trashType == TrashType.Trash)
+        //{
+        //    Instantiate(trashEffect, )
+        //    trashEffect.Play();
+        //}
+        //else if (trashType == TrashType.Recycle)
+        //{
+        //    recycleEffect.Play();
+        //}
+        //else
+        //{
+        //    recycleEffect.Play();
+        //}
+        missed = true;
+    }
+
+    bool missed = false;
+    private void Update()
+    {
+        if (missed)
+        {
+            transform.localScale = transform.localScale - (Vector3.one * Time.deltaTime);
+            if (transform.localScale.x < 0)
+            {
+                transform.gameObject.SetActive(false);
+            }
+        }
     }
 
 }

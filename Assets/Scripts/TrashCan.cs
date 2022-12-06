@@ -8,6 +8,7 @@ public class TrashCan : MonoBehaviour
     [SerializeField] Transform detectionHeightMarker;
     [SerializeField] float detectionRadius = 1;
     [SerializeField] LayerMask collisionMask;
+    [SerializeField] ParticleSystem particleSystem;
 
     public ScoreManager scoreManager;
 
@@ -30,6 +31,7 @@ public class TrashCan : MonoBehaviour
                     //print("trash can detected correct throw");
                     item.OnCorrectlyThrown();
                     scoreManager.OnScore(item.GetTrashType());
+                    particleSystem.Play();
                 }
                 else
                 {

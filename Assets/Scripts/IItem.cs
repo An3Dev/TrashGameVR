@@ -10,5 +10,7 @@ public interface IItem
 
     void OnIncorrectlyThrown();
 
+    void OnMissed();
+
     bool IsInTrashCan();
 }

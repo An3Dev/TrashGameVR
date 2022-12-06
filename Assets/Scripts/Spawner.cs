@@ -25,6 +25,7 @@ public class Spawner : MonoBehaviour
 
     // The available prefabs to choose from
     public GameObject[] availablePrefabs;
+    public GameObject[] trashPrefabs, compostPrefabs, recyclePrefabs;
 
     private List<GameObject> spawnedObjectsList = new List<GameObject>();
 
@@ -71,7 +72,22 @@ public class Spawner : MonoBehaviour
 
 
     void InitRandom() {
-        GameObject prefab = availablePrefabs[Random.Range(0, availablePrefabs.Length)];
+        GameObject prefab;
+        int randNum = Random.Range(0, 2);
+        if (randNum == 0)
+        {
+            prefab = trashPrefabs[Random.Range(0, trashPrefabs.Length)];
+        }
+        else if (randNum == 1)
+        {
+            prefab = recyclePrefabs[Random.Range(0, recyclePrefabs.Length)];
+        }
+        else
+        {
+            prefab = compostPrefabs[Random.Range(0, compostPrefabs.Length)];
+        }
+
+
         GameObject newObj = Instantiate(prefab, spawnAnchor.position, Quaternion.identity);
         totalSpawns += 1;
         spawnedObjectsList.Add(newObj);
