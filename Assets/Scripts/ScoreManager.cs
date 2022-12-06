@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ScoreManager : MonoBehaviour
     public float maxStrikes = 3;
     public float maxMisses = 2;
 
+    public TextMeshProUGUI bestText, currentScoreText;
 
     int currentScore;
     int strikes;
@@ -22,6 +24,8 @@ public class ScoreManager : MonoBehaviour
     {
         OnScore += OnScoreOccurs;
         OnIncorrect += OnIncorrectOccurs;
+
+        bestText.text = "Best: " + PlayerPrefs.GetInt("HighScore", 0);
     }
 
     void OnScoreOccurs(TrashType trashType)
@@ -29,6 +33,12 @@ public class ScoreManager : MonoBehaviour
         //Debug.Log(trashType.ToString());
         currentScore += 1;
         print("Current score: " + currentScore);
+        currentScoreText.text = "Score: " + currentScore;
+
+        if (currentScore > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", currentScore);
+        }
     }
 
     void OnIncorrectOccurs(TrashType canTrashType, TrashType itemTrashType)

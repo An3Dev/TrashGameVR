@@ -110,7 +110,7 @@ public class TrashCanMover : MonoBehaviour
             else if (currTime > time * 2 / 3f)
             {
                 newSpeed = Mathf.Lerp(speed, 0, (time * 2 / 3f) / time);
-                Debug.Log("Slow down");
+                //Debug.Log("Slow down");
             }
 
             foreach (Rigidbody rb in trashCanRigidbodies)

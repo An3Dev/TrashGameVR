@@ -73,7 +73,7 @@ public class Spawner : MonoBehaviour
 
     void InitRandom() {
         GameObject prefab;
-        int randNum = Random.Range(0, 2);
+        int randNum = Random.Range(0, 3);
         if (randNum == 0)
         {
             prefab = trashPrefabs[Random.Range(0, trashPrefabs.Length)];
