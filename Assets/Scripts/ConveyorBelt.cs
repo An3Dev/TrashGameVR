@@ -6,18 +6,18 @@ public class ConveyorBelt : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 5f;
-    Rigidbody belt;
+    Rigidbody junk;
     void Start()
     {
-        belt = GetComponent<Rigidbody>();
+        junk = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 position = belt.position;
-        belt.position += -transform.forward * speed * Time.fixedDeltaTime;
-        belt.MovePosition(position);
+        Vector3 position = junk.position;
+        junk.position += -transform.forward * speed * Time.fixedDeltaTime;
+        junk.MovePosition(position);
 
     }
 }
