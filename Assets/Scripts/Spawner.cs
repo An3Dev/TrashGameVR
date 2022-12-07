@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour
     int totalSpawns = 0;
     private int[] whenToChangeSpawnDelay = { 5, 15, 30 };
     private int indexOfWhenToChange = 0;
-    // Start is called before the first frame update
+    // Start is called before the first frame updateS
     void Start()
     {
         elapsedTime = 0;
@@ -53,16 +53,10 @@ public class Spawner : MonoBehaviour
         if (elapsedTime >= currSpawnDelay) {
             elapsedTime = 0;
         
-            //currSpawnDelay = Mathf.Max(currSpawnDelay - SpawnDelayDecrement, MinSpawnDelay);
             InitRandom();
-            //Debug.Log(indexOfWhenToChange);
             // if it's time to change the spawn delay
             if (indexOfWhenToChange < spawnDelayList.Length-1 && totalSpawns == whenToChangeSpawnDelay[indexOfWhenToChange])
             {
-                //if (currSpawnDelay != spawnDelayList[indexOfWhenToChange])
-                //{
-
-                //}
                 indexOfWhenToChange += 1;
                 currSpawnDelay = spawnDelayList[indexOfWhenToChange];
                 Debug.Log("Change spawn delay to " + currSpawnDelay);

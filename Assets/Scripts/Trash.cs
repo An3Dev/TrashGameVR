@@ -43,19 +43,6 @@ public class Trash : MonoBehaviour, IItem
 
     public void OnMissed()
     {
-        //if (trashType == TrashType.Trash)
-        //{
-        //    Instantiate(trashEffect, )
-        //    trashEffect.Play();
-        //}
-        //else if (trashType == TrashType.Recycle)
-        //{
-        //    recycleEffect.Play();
-        //}
-        //else
-        //{
-        //    recycleEffect.Play();
-        //}
         missed = true;
     }
 
