@@ -2641,11 +2641,12 @@ MonoBehaviour:
   - {fileID: 565206241967158291, guid: 1f8cf82b699898143871a48826abfd04, type: 3}
   - {fileID: 659619250878904108, guid: b7a1da98c610fdc48902a3a5e704f7fe, type: 3}
   trashPrefabs:
-  - {fileID: 659619250878904108, guid: b7a1da98c610fdc48902a3a5e704f7fe, type: 3}
+  - {fileID: 659619250878904108, guid: 21d5245a8b89f084e9087a92ed5f6cb1, type: 3}
   compostPrefabs:
-  - {fileID: 36029543009975371, guid: f6b52f0be1bc25841a8a9fa4518dbceb, type: 3}
+  - {fileID: 659619250878904108, guid: 6cb710067f5a42d49aaaa28cf30074ad, type: 3}
+  - {fileID: 659619250878904108, guid: 0027a15827d893c44b1ecfdf31e038b2, type: 3}
   recyclePrefabs:
-  - {fileID: 565206241967158291, guid: 1f8cf82b699898143871a48826abfd04, type: 3}
+  - {fileID: 659619250878904108, guid: 9342029df8c31df46a116177b05f4465, type: 3}
 --- !u!4 &635273105
 Transform:
   m_ObjectHideFlags: 0
@@ -6191,7 +6192,7 @@ PrefabInstance:
     - target: {fileID: 1942219408596011569, guid: 9512f66576ada46e3adfec9dd2d20b98,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1942219408596011572, guid: 9512f66576ada46e3adfec9dd2d20b98,
         type: 3}
